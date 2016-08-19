@@ -31,5 +31,6 @@ class TestNSURLCredential : XCTestCase {
         XCTAssertEqual(credential.password, "swiftPassword")
         XCTAssertEqual(credential.persistence, URLCredential.Persistence.forSession)
         XCTAssertEqual(credential.hasPassword, true)
+        XCTAssertTrue(credential.isEqual(credential.copy(with:nil)))
     }
 }
